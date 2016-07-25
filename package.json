@@ -1,0 +1,24 @@
+{
+  "name": "org.instafret.laser_scanner_plugin",
+  "version": "0.0.5",
+  "description": "Caribe Laser Scanner Plugin",
+  "cordova": {
+    "id": "org.instafret.laser_scanner_plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "honeywell",
+    "barcode",
+    "caribe",
+    "laser",
+    "scanner",
+    "plugin",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Amar Oukaci",
+  "license": "Apache 2.0"
+}

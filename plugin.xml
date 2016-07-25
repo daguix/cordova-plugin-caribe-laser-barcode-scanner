@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="org.instafret.laser_scanner_plugin"
+	version="0.0.5">
+
+	<name>Caribe Laser Scanner Plugin</name>
+	<description>Caribe Laser Scanner Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>cordova, honeywell, barcode, caribe, laser, scanner, plugin</keywords>
+
+	<js-module src="www/laser_scanner_plugin.js" name="LaserScannerPlugin">
+		<clobbers target="navigator.laser_scanner_plugin" />
+	</js-module>
+  <!--
+  <js-module src="www/network.js" name="network">
+    <clobbers target="navigator.connection" />
+    <clobbers target="navigator.network.connection" />
+  </js-module>
+
+  <js-module src="www/Connection.js" name="Connection">
+    <clobbers target="Connection" />
+  </js-module>-->
+
+	<!-- android -->
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="LaserScannerPlugin">
+				<param name="android-package" value="org.instafret.LaserScannerPlugin" />
+			</feature>
+		</config-file>
+		<source-file src="src/android/libs/ScanSDK.jar" target-dir="libs" />
+		<source-file src="src/android/LaserScannerPlugin.java" target-dir="src/org/instafret" />
+	</platform>
+
+
+</plugin>
