@@ -116,14 +116,14 @@ public class LaserScannerPlugin extends CordovaPlugin {
   }
 
   /**
-   * Stop network receiver.
+   * Stop barcode receiver.
    */
   public void onDestroy() {
     if (this.receiver != null) {
       try {
         webView.getContext().unregisterReceiver(this.receiver);
       } catch (Exception e) {
-        Log.e(LOG_TAG, "Error unregistering network receiver: " + e.getMessage(), e);
+        Log.e(LOG_TAG, "Error unregistering barcode receiver: " + e.getMessage(), e);
       } finally {
         receiver = null;
       }
@@ -137,11 +137,11 @@ public class LaserScannerPlugin extends CordovaPlugin {
   /**
    * Updates the JavaScript side whenever the connection changes
    *
-   * @param info the current active network info
+   * @param info the current active barcode data
    * @return
    */
   private void updateLastBarCode(String barcode) {
-    // send update to javascript "navigator.network.connection"
+    // send update to javascript "navigator.laser_scanner_plugin"
     // Jellybean sends its own info
     if(barcode != lastInfo)
     {
@@ -153,7 +153,7 @@ public class LaserScannerPlugin extends CordovaPlugin {
   /**
    * Create a new plugin result and send it back to JavaScript
    *
-   * @param connection the network info to set as navigator.connection
+   * @param connection the barcode data to set as navigator.laser_scanner_plugin
    */
   private void sendUpdate(String barcode) {
     if (connectionCallbackContext != null) {
@@ -161,7 +161,7 @@ public class LaserScannerPlugin extends CordovaPlugin {
       result.setKeepCallback(true);
       connectionCallbackContext.sendPluginResult(result);
     }
-    //webView.postMessage("networkconnection", type);
+    webView.postMessage("barcode", barcode);
   }
 
 }

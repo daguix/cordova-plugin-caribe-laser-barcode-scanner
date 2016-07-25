@@ -20,5 +20,13 @@
     "cordova-android"
   ],
   "author": "Amar Oukaci",
-  "license": "Apache 2.0"
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daguix/cordova-plugin-caribe-laser-barcode-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daguix/cordova-plugin-caribe-laser-barcode-scanner/issues"
+  },
+  "homepage": "https://github.com/daguix/cordova-plugin-caribe-laser-barcode-scanner#readme"
 }
