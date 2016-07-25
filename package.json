@@ -1,6 +1,6 @@
 {
   "name": "org.instafret.laser_scanner_plugin",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "Caribe Laser Scanner Plugin",
   "cordova": {
     "id": "org.instafret.laser_scanner_plugin",
