@@ -1,9 +1,9 @@
 {
-  "name": "org.instafret.laser_scanner_plugin",
+  "name": "cordova-plugin-caribe-laser-barcode-scanner",
   "version": "0.0.1",
-  "description": "Caribe Laser Scanner Plugin",
+  "description": "Caribe Laser Barcode Scanner Plugin",
   "cordova": {
-    "id": "org.instafret.laser_scanner_plugin",
+    "id": "cordova-plugin-caribe-laser-barcode-scanner",
     "platforms": [
       "android"
     ]
