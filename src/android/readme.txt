@@ -1,4 +1,9 @@
-List of java functions
+You can find the SDK at this address:
+https://www.dropbox.com/s/t9qge3bqn4tftxb/TestScan.zip?dl=0
+
+The cordova plugin is a wrapper around the SDK.
+
+List of java functions:
 
 public boolean openScan()；
 Function：Open scan。
