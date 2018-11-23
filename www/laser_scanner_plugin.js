@@ -34,7 +34,10 @@ LaserScannerPlugin.prototype.getScanVibrateState = function (success_cb, error_c
 var laserScannerPlugin = new LaserScannerPlugin();
 
 channel.createSticky('onCordovaConnectionReady');
-channel.waitForInitialization('onCordovaConnectionReady');
+
+if(navigator.appVersion.includes("U8000")) {
+  channel.waitForInitialization('onCordovaConnectionReady');
+}
 
 channel.onCordovaReady.subscribe(function () {
   laserScannerPlugin.getLastBarCode(function (info) {
