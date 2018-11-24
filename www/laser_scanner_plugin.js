@@ -34,7 +34,9 @@ LaserScannerPlugin.prototype.getScanVibrateState = function (success_cb, error_c
 var laserScannerPlugin = new LaserScannerPlugin();
 
 channel.createSticky('onCordovaConnectionReady');
-channel.waitForInitialization('onCordovaConnectionReady');
+
+// quickfix, dont wait because devices with no scanner wont init device ready
+// channel.waitForInitialization('onCordovaConnectionReady');
 
 channel.onCordovaReady.subscribe(function () {
   laserScannerPlugin.getLastBarCode(function (info) {
