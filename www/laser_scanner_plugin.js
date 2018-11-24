@@ -35,9 +35,8 @@ var laserScannerPlugin = new LaserScannerPlugin();
 
 channel.createSticky('onCordovaConnectionReady');
 
-if(navigator.appVersion.includes("U8000")) {
-  channel.waitForInitialization('onCordovaConnectionReady');
-}
+// quickfix, dont wait because devices with no scanner wont init device ready
+// channel.waitForInitialization('onCordovaConnectionReady');
 
 channel.onCordovaReady.subscribe(function () {
   laserScannerPlugin.getLastBarCode(function (info) {
